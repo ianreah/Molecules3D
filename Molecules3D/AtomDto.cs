@@ -5,12 +5,12 @@ namespace Molecules3D
 	[DataContract]
 	public class AtomDto
 	{
-		public AtomDto(double x, double y, double z, string element)
+		public AtomDto(double x, double y, double z, int color)
 		{
 			this.X = x;
 			this.Y = y;
 			this.Z = z;
-			this.Element = element;
+			this.Color = color;
 		}
 
 		[DataMember]
@@ -23,6 +23,6 @@ namespace Molecules3D
 		public double Z { get; set; }
 
 		[DataMember]
-		public string Element { get; set; }
+		public int Color { get; set; }
 	}
 }
