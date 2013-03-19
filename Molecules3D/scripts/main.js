@@ -1,25 +1,28 @@
 ﻿require(['jquery', 'three.min'], function ($) {
-	var camera = new THREE.PerspectiveCamera(70, 400 / 300, 1, 5000);
-	camera.position.z = 8;
+	var width = window.innerWidth;
+	var height = window.innerHeight;
+	
+	var camera = new THREE.PerspectiveCamera(70, width / height, 1, 500);
+	camera.position.z = 15;
 
 	var renderer = new THREE.WebGLRenderer();
-	renderer.setSize(400, 300);
+	renderer.setSize(width, height);
 	$('#container').append(renderer.domElement);
 	
-	var pointLight = new THREE.PointLight(0xFFFFFF);
-	pointLight.position.x = 10;
-	pointLight.position.y = 50;
-	pointLight.position.z = 130;
+	var ambientLight = new THREE.AmbientLight(0x555555);
+	var directionalLight = new THREE.DirectionalLight(0xffffff);
+	directionalLight.position.set(0.3, 0.5, 2);
 
 	var scene = new THREE.Scene();
-	scene.add(pointLight);
+	scene.add(ambientLight);
+	scene.add(directionalLight);
 
 	$.getJSON('api/search/anything', function (data) {
 		for (var i = 0; i < data.length; i++) {
 			var atom = data[i];
 			var sphere = new THREE.Mesh(
 				new THREE.SphereGeometry(0.3, 16, 16),
-				new THREE.MeshLambertMaterial({ color: atom.Color })
+				new THREE.MeshPhongMaterial({ color: atom.Color, ambient: atom.Color, shininess: 60 })
 			);
 			sphere.position.x = atom.X;
 			sphere.position.y = atom.Y;
