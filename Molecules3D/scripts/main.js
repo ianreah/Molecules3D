@@ -18,8 +18,9 @@
 	scene.add(directionalLight);
 
 	$.getJSON('api/search/anything', function (data) {
-		for (var i = 0; i < data.length; i++) {
-			var atom = data[i];
+		var atoms = data.Atoms;
+		for (var i = 0; i < atoms.length; i++) {
+			var atom = atoms[i];
 			var sphere = new THREE.Mesh(
 				new THREE.SphereGeometry(0.3, 16, 16),
 				new THREE.MeshPhongMaterial({ color: atom.Color, ambient: atom.Color, shininess: 60 })
