@@ -75,8 +75,10 @@
     <Content Include="default.html" />
     <Content Include="Global.asax" />
     <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\jsFrames.min.js" />
     <Content Include="scripts\main.js" />
     <Content Include="scripts\three.min.js" />
+    <Content Include="scripts\TrackballControls.js" />
     <Content Include="styles\styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
