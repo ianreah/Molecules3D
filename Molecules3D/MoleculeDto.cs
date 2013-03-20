@@ -8,5 +8,8 @@ namespace Molecules3D
 	{
 		[DataMember]
 		public IEnumerable<AtomDto> Atoms { get; set; }
+
+		[DataMember]
+		public IEnumerable<BondDto> Bonds { get; set; }
 	}
 }

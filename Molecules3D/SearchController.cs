@@ -12,28 +12,50 @@ namespace Molecules3D
 
 	    public MoleculeDto Get(string searchTerm)
 	    {
-		    return new MoleculeDto {Atoms = Atoms};
+		    return new MoleculeDto {Atoms = Atoms, Bonds = Bonds};
 	    }
 
 	    private static IEnumerable<AtomDto> Atoms
 	    {
 		    get
 		    {
-			    yield return new AtomDto(1.0454, 0.0621, -0.0638, Carbon);
-			    yield return new AtomDto(2.4799, 0.0621, -0.0638, Nitrogen);
-			    yield return new AtomDto(3.2950, 1.2012, -0.0625, Carbon);
-			    yield return new AtomDto(4.5871, 0.8365, -0.0619, Nitrogen);
-			    yield return new AtomDto(4.6415, -0.5434, -0.0629, Carbon);
-			    yield return new AtomDto(3.2465, -1.0092, -0.0645, Carbon);
-			    yield return new AtomDto(3.0089, -2.4528, -0.0656, Carbon);
-			    yield return new AtomDto(1.8708, -2.9127, -0.0720, Oxygen);
-			    yield return new AtomDto(4.1189, -3.2786, -0.0591, Nitrogen);
-			    yield return new AtomDto(5.3992, -2.7356, -0.0645, Carbon);
-			    yield return new AtomDto(6.3574, -3.5029, -0.0707, Oxygen);
-			    yield return new AtomDto(5.6340, -1.4497, -0.0634, Nitrogen);
-			    yield return new AtomDto(6.9934, -0.9915, -0.0628, Carbon);
-			    yield return new AtomDto(3.9482, -4.7028, -0.0467, Carbon);
+			    yield return new AtomDto(-2.974, 1.8129, -0.00445, Carbon);
+			    yield return new AtomDto(-1.5395, 1.8129, -0.00445, Nitrogen);
+			    yield return new AtomDto(-0.7244, 2.952, -0.00305, Carbon);
+			    yield return new AtomDto(0.5677, 2.5873, -0.00245, Nitrogen);
+			    yield return new AtomDto(0.6221, 1.2074, -0.00345, Carbon);
+			    yield return new AtomDto(-0.7729, 0.7416, -0.00505, Carbon);
+			    yield return new AtomDto(-1.0105, -0.702, -0.00625, Carbon);
+			    yield return new AtomDto(-2.1487, -1.1619, -0.01265, Oxygen);
+			    yield return new AtomDto(0.0995, -1.5278, 0.00025, Nitrogen);
+			    yield return new AtomDto(1.3798, -0.9848, -0.00515, Carbon);
+			    yield return new AtomDto(2.338, -1.7521, -0.01125, Oxygen);
+			    yield return new AtomDto(1.6146, 0.3011, -0.00405, Nitrogen);
+			    yield return new AtomDto(2.974, 0.7593, -0.00335, Carbon);
+			    yield return new AtomDto(-0.0712, -2.952, 0.01265, Carbon);
 		    }
+	    }
+
+	    private static IEnumerable<BondDto> Bonds
+	    {
+		    get
+		    {
+				yield return new BondDto(-2.974, 1.8129, -0.00445, -1.5395, 1.8129, -0.00445);
+				yield return new BondDto(-1.5395, 1.8129, -0.00445, -0.7244, 2.952, -0.00305);
+				yield return new BondDto(-0.7244, 2.952, -0.00305, 0.5677, 2.5873, -0.00245);
+				yield return new BondDto(-1.5395, 1.8129, -0.00445, -0.7729, 0.7416, -0.00505);
+				yield return new BondDto(0.5677, 2.5873, -0.00245, 0.6221, 1.2074, -0.00345);
+				yield return new BondDto(0.6221, 1.2074, -0.00345, -0.7729, 0.7416, -0.00505);
+				yield return new BondDto(0.6221, 1.2074, -0.00345, 1.6146, 0.3011, -0.00405);
+				yield return new BondDto(-0.7729, 0.7416, -0.00505, -1.0105, -0.702, -0.00625);
+				yield return new BondDto(-1.0105, -0.702, -0.00625, -2.1487, -1.1619, -0.01265);
+				yield return new BondDto(-1.0105, -0.702, -0.00625, 0.0995, -1.5278, 0.00025);
+				yield return new BondDto(0.0995, -1.5278, 0.00025, 1.3798, -0.9848, -0.00515);
+				yield return new BondDto(0.0995, -1.5278, 0.00025, -0.0712, -2.952, 0.01265);
+				yield return new BondDto(1.3798, -0.9848, -0.00515, 2.338, -1.7521, -0.01125);
+				yield return new BondDto(1.3798, -0.9848, -0.00515, 1.6146, 0.3011, -0.00405);
+				yield return new BondDto(1.6146, 0.3011, -0.00405, 2.974, 0.7593, -0.00335);
+			}
 	    }
     }
 }
