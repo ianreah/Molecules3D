@@ -21,7 +21,7 @@
 	scene.add(molecule);
 	scene.add(camera);
 
-	$.getJSON('api/search/anything', function (data) {
+	$.getJSON('api/search', function (data) {
 		var atoms = data.Atoms;
 		for (var i = 0; i < atoms.length; i++) {
 			var atom = atoms[i];

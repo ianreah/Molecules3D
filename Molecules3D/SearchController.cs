@@ -10,12 +10,20 @@ namespace Molecules3D
 	    private const int Nitrogen = 0x003050F8;
 	    private const int Oxygen = 0x00EE2010;
 
-	    public MoleculeDto Get(string searchTerm)
-	    {
-		    return new MoleculeDto {Atoms = Atoms, Bonds = Bonds};
-	    }
+		// GET api/search/{searchTerm} - search for a molecule
+		public MoleculeDto Get(string searchTerm)
+		{
+			// For now, just return the default molecule!
+			return Get();
+		}
 
-	    private static IEnumerable<AtomDto> Atoms
+		// GET api/search - return the default molecule
+		public MoleculeDto Get()
+		{
+			return new MoleculeDto { Atoms = Atoms, Bonds = Bonds };
+		}
+
+		private static IEnumerable<AtomDto> Atoms
 	    {
 		    get
 		    {
