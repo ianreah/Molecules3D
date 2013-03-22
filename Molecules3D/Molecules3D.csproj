@@ -84,16 +84,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AtomDto.cs" />
+    <Compile Include="Atoms.cs" />
     <Compile Include="BondDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LineReader.cs" />
     <Compile Include="MoleculeDto.cs" />
+    <Compile Include="MolFileReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <EmbeddedResource Include="MolFiles\caffeine.mol" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
