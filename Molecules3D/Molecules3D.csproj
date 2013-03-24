@@ -72,6 +72,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AR_mediastream.html" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
     <Content Include="scripts\jquery.min.js" />
