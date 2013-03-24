@@ -1,4 +1,5 @@
 ﻿$(function () {
+    DEBUG = true;
     window.URL = window.URL || window.webkitURL;
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
@@ -88,9 +89,6 @@
             // Use the imageReader to detect the markers
             // (The 2nd parameter is a threshold. May need to investigate this also!)
             var markers = detector.detectMarkerLite(imageReader, 128);
-            if (markers > 0) {
-                console.log("Detected!");
-            }
 
             // Render the three.js scene
             var time = Date.now() * 0.0004;
