@@ -2,13 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+   	<link rel="stylesheet" type="text/css" href="styles/AR_styles.css"/>
 </head>
 <body>
-    <h2>Input Stream:</h2>
-    <video id="inputStream" width="320" height="240" autoplay="autoplay"></video>
+    <div class="sidebyside">
+        <h2>Input Video Stream:</h2>
+        <video id="inputStream" width="320" height="240" autoplay="autoplay"></video>
+    </div>
 
-    <h2>Capture to send to the detector:</h2>
-    <canvas id="inputCapture" width="320" height="240"></canvas>
+    <div class="sidebyside">
+        <h2>Detector Input Canvas:</h2>
+        <canvas id="inputCapture" width="320" height="240"></canvas>
+    </div>
 
     <script src="scripts/jquery.min.js"></script>
     <script src="scripts/jsFrames.min.js"></script>

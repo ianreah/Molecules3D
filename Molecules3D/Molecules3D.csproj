@@ -81,6 +81,7 @@
     <Content Include="scripts\main.js" />
     <Content Include="scripts\three.min.js" />
     <Content Include="scripts\TrackballControls.js" />
+    <Content Include="styles\AR_styles.css" />
     <Content Include="styles\styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>

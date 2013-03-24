@@ -1,0 +1,13 @@
+﻿body {
+    background-color: #f2f2f2;
+}
+
+h2 {
+  color:#222222;
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+.sidebyside {
+    display: inline-block;
+}
