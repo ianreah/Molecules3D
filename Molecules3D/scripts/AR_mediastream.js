@@ -7,9 +7,9 @@
     }
 
     if (hasGetUserMedia()) {
-        var $inputStream = $('#inputStream');
+        var inputStream = $('#inputStream')[0];
         navigator.getUserMedia({ 'video': true }, function (stream) {
-            $inputStream[0].src = window.URL.createObjectURL(stream);
+            inputStream.src = window.URL.createObjectURL(stream);
         });
     } else {
         alert("Couldn't access webcam.");
