@@ -1,12 +1,9 @@
 ﻿$(function () {
-	var width = window.innerWidth;
-	var height = window.innerHeight;
-
-	var camera = new THREE.PerspectiveCamera(70, width / height, 1, 500);
+	var camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 500);
 	camera.position.z = 15;
 
 	var renderer = new THREE.WebGLRenderer();
-	renderer.setSize(width, height);
+	renderer.setSize(window.innerWidth, window.innerHeight);
 	$('#container').append(renderer.domElement);
 
 	var ambientLight = new THREE.AmbientLight(0x555555);
@@ -59,4 +56,11 @@
 		renderer.render(scene, camera);
 	});
 	jsFrames.start();
+	
+	$(window).resize(function () {
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+		renderer.setSize(window.innerWidth, window.innerHeight);
+	});
 });
