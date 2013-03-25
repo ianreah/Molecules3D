@@ -1,5 +1,7 @@
 ﻿body {
-	background: #050505
+	background: #050505;
+	margin: 0;
+	overflow: hidden;
 }
 
 canvas {
