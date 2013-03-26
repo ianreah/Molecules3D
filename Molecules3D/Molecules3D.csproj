@@ -75,6 +75,7 @@
     <Content Include="AR_mediastream.html" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
+    <Content Include="images\blacktocat.png" />
     <Content Include="scripts\AR_mediastream.js" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\JSARToolKit.min.js" />
