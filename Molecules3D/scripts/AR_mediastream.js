@@ -95,9 +95,6 @@
         var markers = detector.detectMarkerLite(imageReader, 128);
 
         // Render the three.js scene
-        var time = Date.now() * 0.0004;
-        molecule.rotation.x = time;
-        molecule.rotation.y = time * 0.7;
         renderer.render(scene, camera);
     });
 });
