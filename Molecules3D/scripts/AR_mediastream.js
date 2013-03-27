@@ -51,12 +51,19 @@
         }
     });
 
-    var inputStream = $('#inputStream')[0];
+    var input;
+    var inputStream = $('#inputStream');
+    var inputImage = $('#inputImage');
     navigator.getUserMedia({ 'video': true }, function (stream) {
-        inputStream.src = window.URL.createObjectURL(stream);
+	    input = inputStream[0];
+        input.src = window.URL.createObjectURL(stream);
         jsFrames.start();
     }, function() {
-        alert("Couldn't access webcam.");
+    	alert("Couldn't access webcam. Fallback to static image");
+    	input = inputImage[0];
+    	inputStream.hide();
+	    inputImage.show();
+    	jsFrames.start();
     });
 
     var inputCapture = $('#inputCapture')[0];
@@ -80,7 +87,7 @@
     jsFrames.registerAnimation(function () {
         // Capture the current frame from the inputStream
         // (then we need to tell the image reader that the input has changed.)
-        inputCapture.getContext('2d').drawImage(inputStream, 0, 0, width, height);
+        inputCapture.getContext('2d').drawImage(input, 0, 0, width, height);
         inputCapture.changed = true;
 
         // Use the imageReader to detect the markers
