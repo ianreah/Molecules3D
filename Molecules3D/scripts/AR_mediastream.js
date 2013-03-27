@@ -60,6 +60,8 @@
         navigator.getUserMedia({ 'video': true }, function (stream) {
             inputStream.src = window.URL.createObjectURL(stream);
             jsFrames.start();
+        }, function() {
+        	alert("Couldn't access webcam.");
         });
 
         var inputCapture = $('#inputCapture')[0];
