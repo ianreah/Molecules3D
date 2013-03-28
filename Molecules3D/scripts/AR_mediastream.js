@@ -7,24 +7,24 @@
     var height = 240;
 
     // Set up the three.js scene
-    var camera = new THREE.PerspectiveCamera(70, width / height, 1, 500);
-    camera.position.z = 15;
+    var overlayCamera = new THREE.PerspectiveCamera(70, width / height, 1, 500);
+    overlayCamera.position.z = 15;
 
     var renderer = new THREE.WebGLRenderer();
-    renderer.setSize(width, height);
-    $('#model').append(renderer.domElement);
+    renderer.setSize(width * 3, height * 3);
+    $('#result').append(renderer.domElement);
 
     var ambientLight = new THREE.AmbientLight(0x555555);
     var directionalLight = new THREE.DirectionalLight(0xffffff);
     directionalLight.position.set(0.3, 0.5, 2);
-    camera.add(directionalLight);
+    overlayCamera.add(directionalLight);
 
     var molecule = new THREE.Object3D();
 
-    var scene = new THREE.Scene();
-    scene.add(ambientLight);
-    scene.add(molecule);
-    scene.add(camera);
+    var overlayScene = new THREE.Scene();
+    overlayScene.add(ambientLight);
+    overlayScene.add(molecule);
+    overlayScene.add(overlayCamera);
 
     $.getJSON('api/search', function (data) {
         var atoms = data.Atoms;
@@ -67,6 +67,16 @@
     });
 
     var inputCapture = $('#inputCapture')[0];
+	
+	// Set up the scene for the input image
+    var inputCamera = new THREE.Camera();
+    var inputScene = new THREE.Scene();
+    var inputTexture = new THREE.Texture(inputCapture);
+    var inputPlane = new THREE.Mesh(new THREE.PlaneGeometry(2, 2, 0), new THREE.MeshBasicMaterial({ map: inputTexture }));
+    inputPlane.material.depthTest = false;
+    inputPlane.material.depthWrite = false;
+    inputScene.add(inputPlane);
+    inputScene.add(inputCamera);
 
     // This JSARToolkit object reads image data from the input canvas
     var imageReader = new NyARRgbRaster_Canvas2D(inputCapture);
@@ -89,12 +99,16 @@
         // (then we need to tell the image reader that the input has changed.)
         inputCapture.getContext('2d').drawImage(input, 0, 0, width, height);
         inputCapture.changed = true;
+	    inputTexture.needsUpdate = true;
 
         // Use the imageReader to detect the markers
         // (The 2nd parameter is a threshold. May need to investigate this also!)
         var markers = detector.detectMarkerLite(imageReader, 128);
 
         // Render the three.js scene
-        renderer.render(scene, camera);
+        renderer.autoClear = false;
+        renderer.clear();
+        renderer.render(inputScene, inputCamera);
+        renderer.render(overlayScene, overlayCamera);
     });
 });
