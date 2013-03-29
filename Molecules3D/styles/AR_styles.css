@@ -8,10 +8,6 @@ h2 {
   font-size: 18px;
 }
 
-.sidebyside {
-    display: inline-block;
-}
-
 .debug {
     display: none;
 }

@@ -1,4 +1,19 @@
 ﻿$(function () {
+    var debugaxis = function (axisLength, object) {
+
+        function createAxis(p1, p2, color, object) {
+            var line, lineGeometry = new THREE.Geometry(),
+            lineMat = new THREE.LineBasicMaterial({ color: color, lineWidth: 1 });
+            lineGeometry.vertices.push(p1, p2);
+            line = new THREE.Line(lineGeometry, lineMat);
+            object.add(line);
+        }
+
+        createAxis(new THREE.Vector3(-axisLength, 0, 0), new THREE.Vector3(axisLength, 0, 0), 0xFF0000, object);
+        createAxis(new THREE.Vector3(0, -axisLength, 0), new THREE.Vector3(0, axisLength, 0), 0x00FF00, object);
+        createAxis(new THREE.Vector3(0, 0, -axisLength), new THREE.Vector3(0, 0, axisLength), 0x0000FF, object);
+    };
+
     DEBUG = false;
     if (DEBUG) {
         $(".debug").show();
@@ -54,7 +69,10 @@
     var molecule = new THREE.Object3D();
     molecule.matrixAutoUpdate = false;
     molecule.position.z = -15;
-	
+    if (DEBUG) {
+        debugaxis(5, molecule);
+    }
+
     var overlayScene = new THREE.Scene();
     overlayScene.add(ambientLight);
     overlayScene.add(molecule);
