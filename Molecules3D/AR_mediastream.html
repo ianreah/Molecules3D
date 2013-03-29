@@ -5,23 +5,22 @@
    	<link rel="stylesheet" type="text/css" href="styles/AR_styles.css"/>
 </head>
 <body>
-    <div class="sidebyside">
+    <div class="sidebyside debug">
         <h2>Input (Video Stream / Static Image):</h2>
 	    <video id="inputStream" width="320" height="240" autoplay="autoplay"></video>
 	    <img id="inputImage" width="320" height="240" src="images/static.jpg" style="display: none"/>
     </div>
 
-    <div class="sidebyside">
+    <div class="sidebyside debug">
         <h2>Detector Input Canvas:</h2>
         <canvas id="inputCapture" width="320" height="240"></canvas>
     </div>
 
-    <div class="sidebyside">
+    <div class="sidebyside debug">
         <h2>Debug Canvas:</h2>
         <canvas id="debugCanvas" width="320" height="240"></canvas>
     </div>
 
-    <h2>Result:</h2>
     <div id="result"></div>
 
     <script src="scripts/jquery.min.js"></script>

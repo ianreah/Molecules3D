@@ -1,17 +1,49 @@
 ﻿$(function () {
-    DEBUG = true;
+    DEBUG = false;
+    if (DEBUG) {
+        $(".debug").show();
+    } else {
+        $(".debug").hide();
+    }
+
     window.URL = window.URL || window.webkitURL;
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || function (type, success, error) { error(); };
+
+    function setThreeMatrixFromArray(threeMatrix, arrayMatrix) {
+        return threeMatrix.set(
+            arrayMatrix[0], arrayMatrix[4],  arrayMatrix[8], arrayMatrix[12],
+            arrayMatrix[1], arrayMatrix[5],  arrayMatrix[9], arrayMatrix[13],
+            arrayMatrix[2], arrayMatrix[6], arrayMatrix[10], arrayMatrix[14],
+            arrayMatrix[3], arrayMatrix[7], arrayMatrix[11], arrayMatrix[15]);
+    };
+
+    function copyMatrixToArray(matrix, arrayMatrix) {
+    	arrayMatrix[0] = matrix.m00;
+    	arrayMatrix[1] = -matrix.m10;
+    	arrayMatrix[2] = matrix.m20;
+    	arrayMatrix[3] = 0;
+    	arrayMatrix[4] = matrix.m01;
+    	arrayMatrix[5] = -matrix.m11;
+    	arrayMatrix[6] = matrix.m21;
+    	arrayMatrix[7] = 0;
+    	arrayMatrix[8] = -matrix.m02;
+    	arrayMatrix[9] = matrix.m12;
+    	arrayMatrix[10] = -matrix.m22;
+    	arrayMatrix[11] = 0;
+    	arrayMatrix[12] = matrix.m03;
+    	arrayMatrix[13] = -matrix.m13;
+    	arrayMatrix[14] = matrix.m23;
+    	arrayMatrix[15] = 1;
+    }
 
     var width = 320;
     var height = 240;
 
     // Set up the three.js scene
-    var overlayCamera = new THREE.PerspectiveCamera(70, width / height, 1, 500);
-    overlayCamera.position.z = 15;
+    var overlayCamera = new THREE.Camera();
 
     var renderer = new THREE.WebGLRenderer();
-    renderer.setSize(width * 3, height * 3);
+    renderer.setSize(width * 2, height * 2);
     $('#result').append(renderer.domElement);
 
     var ambientLight = new THREE.AmbientLight(0x555555);
@@ -20,7 +52,9 @@
     overlayCamera.add(directionalLight);
 
     var molecule = new THREE.Object3D();
-
+    molecule.matrixAutoUpdate = false;
+    molecule.position.z = -15;
+	
     var overlayScene = new THREE.Scene();
     overlayScene.add(ambientLight);
     overlayScene.add(molecule);
@@ -88,11 +122,17 @@
 
     // The marker detector
     // (The 2nd parameter could be marker width? May need to investigate this!)
-    var detector = new FLARMultiIdMarkerDetector(parameters, 120);
+    var detector = new FLARMultiIdMarkerDetector(parameters, 5);
 
     // For tracking video, in continue mode the detector will track markers
     // across multiple frames.
     detector.setContinueMode(true);
+
+    var tmpMatrix = new Float32Array(16);
+    parameters.copyCameraMatrix(tmpMatrix, 10, 10000);
+    setThreeMatrixFromArray(overlayCamera.projectionMatrix, tmpMatrix);
+
+    var resultMatrix = new NyARTransMatResult();
 
     jsFrames.registerAnimation(function () {
         // Capture the current frame from the inputStream
@@ -103,8 +143,13 @@
 
         // Use the imageReader to detect the markers
         // (The 2nd parameter is a threshold. May need to investigate this also!)
-        var markers = detector.detectMarkerLite(imageReader, 128);
-
+	    if (detector.detectMarkerLite(imageReader, 128) > 0) {
+	        detector.getTransformMatrix(0, resultMatrix);
+	        copyMatrixToArray(resultMatrix, tmpMatrix);
+	        setThreeMatrixFromArray(molecule.matrix, tmpMatrix);
+	        molecule.matrixWorldNeedsUpdate = true;
+	    }
+	    
         // Render the three.js scene
         renderer.autoClear = false;
         renderer.clear();

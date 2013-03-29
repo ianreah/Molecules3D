@@ -11,3 +11,7 @@ h2 {
 .sidebyside {
     display: inline-block;
 }
+
+.debug {
+    display: none;
+}
