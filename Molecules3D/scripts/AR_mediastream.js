@@ -80,6 +80,11 @@
 
     $.getJSON('api/search', function (data) {
         var atoms = data.Atoms;
+        var zOffset = Number.MAX_VALUE;
+        for (var x = 0; x < atoms.length; x++) {
+            zOffset = Math.min(zOffset, atoms[x].Y);
+        }
+
         for (var i = 0; i < atoms.length; i++) {
             var atom = atoms[i];
             var sphere = new THREE.Mesh(
@@ -87,8 +92,8 @@
                 new THREE.MeshPhongMaterial({ color: atom.Color, ambient: atom.Color, shininess: 60 })
             );
             sphere.position.x = atom.X;
-            sphere.position.y = atom.Y;
-            sphere.position.z = atom.Z;
+            sphere.position.y = atom.Z;
+            sphere.position.z = atom.Y + zOffset;
             molecule.add(sphere);
         }
 
@@ -96,7 +101,7 @@
         for (var j = 0; j < bonds.length; j++) {
             var bond = bonds[j];
             var tube = new THREE.Mesh(
-                new THREE.TubeGeometry(new THREE.SplineCurve3([new THREE.Vector3(bond.FromX, bond.FromY, bond.FromZ), new THREE.Vector3(bond.ToX, bond.ToY, bond.ToZ)]), 64, 0.03),
+                new THREE.TubeGeometry(new THREE.SplineCurve3([new THREE.Vector3(bond.FromX, bond.FromZ, bond.FromY + zOffset), new THREE.Vector3(bond.ToX, bond.ToZ, bond.ToY + zOffset)]), 64, 0.03),
                 new THREE.MeshPhongMaterial({ color: 0xF9F9F9, ambient: 0xF9F9F9 })
             );
             molecule.add(tube);
@@ -140,7 +145,7 @@
 
     // The marker detector
     // (The 2nd parameter could be marker width? May need to investigate this!)
-    var detector = new FLARMultiIdMarkerDetector(parameters, 5);
+    var detector = new FLARMultiIdMarkerDetector(parameters, 10);
 
     // For tracking video, in continue mode the detector will track markers
     // across multiple frames.
