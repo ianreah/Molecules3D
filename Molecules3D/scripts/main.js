@@ -41,6 +41,8 @@
 			);
 			molecule.add(tube);
 		}
+
+		$('#loading').hide();
 	});
 
 	var controls = new THREE.TrackballControls(camera, renderer.domElement);

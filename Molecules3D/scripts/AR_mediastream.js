@@ -106,6 +106,8 @@
             );
             molecule.add(tube);
         }
+
+        $('#loading').hide();
     });
 
     var input;
