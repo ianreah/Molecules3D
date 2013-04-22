@@ -78,8 +78,8 @@
     overlayScene.add(molecule);
     overlayScene.add(overlayCamera);
 
-    $.getJSON('api/search', function (data) {
-        var atoms = data.Atoms;
+    $.getJSON('/MolFiles/caffeine.json', function (data) {
+    	var atoms = data.Atoms;
         var zOffset = Number.MAX_VALUE;
         for (var x = 0; x < atoms.length; x++) {
             zOffset = Math.min(zOffset, atoms[x].Y);
