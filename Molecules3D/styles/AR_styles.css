@@ -8,11 +8,6 @@ h2 {
   font-size: 18px;
 }
 
-.debug {
-    display: none;
-}
-
-
 #loading {
 	font-size: 80px;
 	font-weight: bold;

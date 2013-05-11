@@ -8,21 +8,10 @@
 		
 	<div id="loading">Loading...</div>
 
-	<div class="debug" style="display: inline-block">
-        <h2>Input (Video Stream / Static Image):</h2>
-	    <video id="inputStream" width="320" height="240" autoplay="autoplay"></video>
-	    <img id="inputImage" width="320" height="240" src="images/static.png" style="display: none"/>
-    </div>
-
-    <div class="debug" style="display: inline-block">
-        <h2>Detector Input Canvas:</h2>
-        <canvas id="inputCapture" width="320" height="240"></canvas>
-    </div>
-
-    <div class="debug" style="display: inline-block">
-        <h2>Debug Canvas:</h2>
-        <canvas id="debugCanvas" width="320" height="240"></canvas>
-    </div>
+    <video id="inputStream" width="320" height="240" autoplay="autoplay" style="display: none"></video>
+    <img id="inputImage" width="320" height="240" src="images/static.png" style="display: none"/>
+    <canvas id="inputCapture" width="320" height="240" style="display: none"></canvas>
+    <canvas id="debugCanvas" width="320" height="240" style="display: none"></canvas>
 
     <div id="result"></div>
 
