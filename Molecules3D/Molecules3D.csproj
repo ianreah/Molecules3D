@@ -82,6 +82,7 @@
     <Content Include="scripts\JSARToolKit.min.js" />
     <Content Include="scripts\jsFrames.min.js" />
     <Content Include="scripts\main.js" />
+    <Content Include="scripts\THREE.JsArExtensions.js" />
     <Content Include="scripts\three.min.js" />
     <Content Include="scripts\TrackballControls.js" />
     <Content Include="styles\AR_styles.css" />
