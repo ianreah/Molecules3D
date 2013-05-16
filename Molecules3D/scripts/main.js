@@ -1,4 +1,10 @@
 ﻿$(function () {
+	if (Detector.webgl !== true) {
+		$('#loading').hide();
+		$('#nowebgl').show();
+		return;
+	}
+
 	var camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 500);
 	camera.position.z = 15;
 

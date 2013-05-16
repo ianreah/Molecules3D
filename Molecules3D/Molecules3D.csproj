@@ -78,6 +78,7 @@
     <Content Include="images\blacktocat.png" />
     <Content Include="images\static.png" />
     <Content Include="scripts\AR_mediastream.js" />
+    <Content Include="scripts\Detector.js" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\JSARToolKit.min.js" />
     <Content Include="scripts\jsFrames.min.js" />

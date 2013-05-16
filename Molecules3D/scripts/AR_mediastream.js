@@ -1,4 +1,10 @@
 ﻿$(function () {
+	if (Detector.webgl !== true) {
+		$('#loading').hide();
+		$('#nowebgl').show();
+		return;
+	}
+
 	// Set this to true and the JSARToolkit will output some debug information to
 	// the console and copy a visualisation of its analysis results to the
 	// debugCanvas.
