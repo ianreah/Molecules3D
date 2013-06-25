@@ -10,7 +10,8 @@ namespace Molecules3D
 			                                              {"C", 0x00909090},
 														  {"N", 0x003050F8},
 														  {"O", 0x00EE2010},
-														  {"H", 0x00D3D3D3}
+														  {"H", 0x00D3D3D3},
+														  {"Al", 0x00BFA6A6}
 		                                              };
 
 		public static IEnumerable<AtomDto> CentralizeAtoms(this IEnumerable<AtomDto> atoms)
