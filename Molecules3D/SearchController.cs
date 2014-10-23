@@ -17,7 +17,7 @@ namespace Molecules3D
 		// GET api/search - return the default molecule
 		public MoleculeDto Get()
 		{
-			return MoleculeDto.FromMolFile(() => Assembly.GetExecutingAssembly().GetManifestResourceStream("Molecules3D.MolFiles.caffeine.mol"));
+			return MoleculeDto.FromMolFile(() => Assembly.GetExecutingAssembly().GetManifestResourceStream("Molecules3D.MolFiles.ethanol-dog.mol"));
 		}
 	}
 }

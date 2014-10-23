@@ -108,6 +108,7 @@
     <EmbeddedResource Include="MolFiles\caffeine.mol" />
     <Content Include="MolFiles\caffeine.json" />
     <Content Include="scripts\THREE.Molecule.js" />
+    <EmbeddedResource Include="MolFiles\ethanol-dog.mol" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

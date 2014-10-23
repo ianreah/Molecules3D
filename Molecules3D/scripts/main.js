@@ -24,7 +24,7 @@
 	scene.add(molecule);
 	scene.add(camera);
 
-	molecule.loadAsync('/MolFiles/caffeine.json', function () {
+	molecule.loadAsync('/api/search', function () {
 	    $('#loading').hide();
 	});
 
