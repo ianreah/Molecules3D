@@ -10,7 +10,7 @@ namespace Molecules3D
         {
             GlobalConfiguration.Configuration.Routes.MapHttpRoute(
                 name: "API Search",
-                routeTemplate: "api/search/{searchTerm}",
+                routeTemplate: "api/search/{*searchTerm}",
 				defaults: new { controller = "Search" });
         }
     }

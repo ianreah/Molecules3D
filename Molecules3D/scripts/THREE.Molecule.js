@@ -3,8 +3,17 @@
 
 THREE.Molecule.prototype = new THREE.Object3D();
 
+THREE.Object3D.prototype.clear = function () {
+    var children = this.children;
+    for (var i = children.length - 1; i >= 0; i--) {
+        var child = children[i];
+        child.clear();
+        this.remove(child);
+    };
+};
+
 THREE.Molecule.prototype.loadAsync = function (jsonUrl, loadedCallback) {
-	// TODO: Reset the object first
+    this.clear();
 	var me = this;
 
 	$.getJSON(jsonUrl, function (data) {

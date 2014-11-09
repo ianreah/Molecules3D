@@ -5,6 +5,18 @@
 		return;
 	}
 
+	$('#smiles').keydown(function (event) {
+	    if (event.keyCode == 13) {
+	        $('#loading').show();
+
+	        molecule.loadAsync('/api/search/' + $('#smiles').val(), function () {
+	            $('#loading').hide();
+	        });
+
+	        return false;
+	    }
+	});
+
 	var camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 500);
 	camera.position.z = 10;
 
