@@ -102,20 +102,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="LineReader.cs" />
     <Compile Include="MoleculeBuilder.cs" />
     <Compile Include="MoleculeDto.cs" />
-    <Compile Include="MolFileReader.cs" />
     <Compile Include="OBDotNetExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <EmbeddedResource Include="MolFiles\caffeine.mol" />
-    <Content Include="MolFiles\caffeine.json" />
     <Content Include="scripts\THREE.Molecule.js" />
-    <EmbeddedResource Include="MolFiles\ethanol-dog.mol" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

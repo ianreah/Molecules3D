@@ -14,11 +14,5 @@ namespace Molecules3D
                                         .Gen3D()
                                         .ToDto();
 		}
-
-		// GET api/search - return the default molecule
-		public MoleculeDto Get()
-		{
-			return MoleculeDto.FromMolFile(() => Assembly.GetExecutingAssembly().GetManifestResourceStream("Molecules3D.MolFiles.ethanol-dog.mol"));
-		}
 	}
 }
