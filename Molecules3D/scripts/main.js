@@ -24,7 +24,7 @@
 	scene.add(molecule);
 	scene.add(camera);
 
-	molecule.loadAsync('/api/search', function () {
+	molecule.loadAsync('/api/search/Cn1cnc2c1c(=O)n(c(=O)n2C)C', function () {
 	    $('#loading').hide();
 	});
 

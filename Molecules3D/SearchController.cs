@@ -10,8 +10,9 @@ namespace Molecules3D
 		// GET api/search/{searchTerm} - search for a molecule
 		public MoleculeDto Get(string searchTerm)
 		{
-			// For now, just return the default molecule!
-			return Get();
+            return new MoleculeBuilder().FromSmiles(searchTerm)
+                                        .Gen3D()
+                                        .ToDto();
 		}
 
 		// GET api/search - return the default molecule

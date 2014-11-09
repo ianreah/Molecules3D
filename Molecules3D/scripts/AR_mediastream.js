@@ -42,7 +42,7 @@
     overlayCamera.add(directionalLight);
 
     var molecule = new THREE.Molecule();
-    molecule.loadAsync('/MolFiles/caffeine.json', function () {
+    molecule.loadAsync('/api/search/Cn1cnc2c1c(=O)n(c(=O)n2C)C', function () {
         // We'll be telling the object when to update its matrix,
         // based on what the detector finds...
         // ...so, don't do it unless we tell you to!
