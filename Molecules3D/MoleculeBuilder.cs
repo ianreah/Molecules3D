@@ -22,11 +22,26 @@ namespace Molecules3D
             return this;
         }
 
+	    public MoleculeBuilder Centralize()
+	    {
+			var atomList = molecule.Atoms().ToList();
+
+			var xOffset = (atomList.Min(a => a.GetX()) + atomList.Max(a => a.GetX())) / 2.0;
+			var yOffset = (atomList.Min(a => a.GetY()) + atomList.Max(a => a.GetY())) / 2.0;
+			var zOffset = (atomList.Min(a => a.GetZ()) + atomList.Max(a => a.GetZ())) / 2.0;
+
+		    foreach (var atom in atomList)
+		    {
+			    atom.SetVector(atom.GetX()-xOffset, atom.GetY()-yOffset, atom.GetZ()-zOffset);
+		    }
+		    return this;
+	    }
+
         public MoleculeDto ToDto()
         {
             var result = new MoleculeDto
             {
-                Atoms = molecule.Atoms().Select(x => new AtomDto(x.GetX(), x.GetY(), x.GetZ(), x.GetElementColor())).CentralizeAtoms()
+                Atoms = molecule.Atoms().Select(x => new AtomDto(x.GetX(), x.GetY(), x.GetZ(), x.GetElementColor()))
             };
 
             result.Bonds = molecule.Bonds().Select(x =>

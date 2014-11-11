@@ -12,6 +12,7 @@ namespace Molecules3D
 		{
             return new MoleculeBuilder().FromSmiles(searchTerm)
                                         .Gen3D()
+										.Centralize()
                                         .ToDto();
 		}
 	}
