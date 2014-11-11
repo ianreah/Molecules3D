@@ -26,7 +26,7 @@ namespace Molecules3D
         {
             var result = new MoleculeDto
             {
-                Atoms = molecule.Atoms().Select(x => new AtomDto(x.GetX(), x.GetY(), x.GetZ(), Atoms.Colors[x.GetElementSymbol()])).CentralizeAtoms()
+                Atoms = molecule.Atoms().Select(x => new AtomDto(x.GetX(), x.GetY(), x.GetZ(), x.GetElementColor())).CentralizeAtoms()
             };
 
             result.Bonds = molecule.Bonds().Select(x =>

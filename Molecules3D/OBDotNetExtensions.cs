@@ -1,4 +1,6 @@
-﻿using OpenBabel;
+﻿using System.Drawing;
+using System.Linq;
+using OpenBabel;
 
 namespace Molecules3D
 {
@@ -6,9 +8,13 @@ namespace Molecules3D
 	{
 		private static readonly OBElementTable obElementTable = new OBElementTable();
 
-		public static string GetElementSymbol(this OBAtom obAtom)
+		public static int GetElementColor(this OBAtom obAtom)
 		{
-			return obElementTable.GetSymbol((int)obAtom.GetAtomicNum());
+			var rgb = obElementTable.GetRGB((int)obAtom.GetAtomicNum())
+				                    .Select(x => (int)(x * 255))
+									.ToArray();
+
+			return Color.FromArgb(0, rgb[0], rgb[1], rgb[2]).ToArgb();
 		}
 	}
 }
