@@ -144,7 +144,8 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>copy "$(SolutionDir)3rdParty\OBDotNet\*.*" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Debug copy "$(SolutionDir)3rdParty\OBDotNet\*.*" "$(TargetDir)"
+if $(ConfigurationName) == Release copy "$(SolutionDir)3rdParty\OBDotNet\*.*" "$(TargetDir)_PublishedWebsites\Molecules3D\bin\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
