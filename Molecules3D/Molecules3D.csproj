@@ -77,6 +77,282 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\3rdParty\OBDotNet\babel.exe">
+      <Link>babel.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\aromatic.h">
+      <Link>aromatic.h</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\aromatic.txt">
+      <Link>aromatic.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\atomtyp.h">
+      <Link>atomtyp.h</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\atomtyp.txt">
+      <Link>atomtyp.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\babel_povray3.inc">
+      <Link>babel_povray3.inc</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\bondtyp.h">
+      <Link>bondtyp.h</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\bondtyp.txt">
+      <Link>bondtyp.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\CMakeLists.txt">
+      <Link>CMakeLists.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\element.h">
+      <Link>element.h</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\element.txt">
+      <Link>element.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\fragments.txt">
+      <Link>fragments.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\isotope-small.txt">
+      <Link>isotope-small.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\isotope.h">
+      <Link>isotope.h</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\isotope.txt">
+      <Link>isotope.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\logp.txt">
+      <Link>logp.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\MACCS.txt">
+      <Link>MACCS.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mpC.txt">
+      <Link>mpC.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mr.txt">
+      <Link>mr.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\patterns.txt">
+      <Link>patterns.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\phmodel.txt">
+      <Link>phmodel.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\phmodeldata.h">
+      <Link>phmodeldata.h</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\plugindefines.txt">
+      <Link>plugindefines.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\psa.txt">
+      <Link>psa.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\qeq.txt">
+      <Link>qeq.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\resdata.h">
+      <Link>resdata.h</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\resdata.txt">
+      <Link>resdata.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\ringtyp.txt">
+      <Link>ringtyp.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\SMARTS_InteLigand.txt">
+      <Link>SMARTS_InteLigand.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\space-groups.txt">
+      <Link>space-groups.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\space-groups.xsl">
+      <Link>space-groups.xsl</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\splash.png">
+      <Link>splash.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\superatom.txt">
+      <Link>superatom.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\templates.sdf">
+      <Link>templates.sdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\torlib.h">
+      <Link>torlib.h</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\torlib.txt">
+      <Link>torlib.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\types.h">
+      <Link>types.h</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\types.txt">
+      <Link>types.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\freetype6.dll">
+      <Link>freetype6.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\iconv.dll">
+      <Link>iconv.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\libcairo-2.dll">
+      <Link>libcairo-2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\libexpat-1.dll">
+      <Link>libexpat-1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\libfontconfig-1.dll">
+      <Link>libfontconfig-1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\libinchi.dll">
+      <Link>libinchi.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\libpng14-14.dll">
+      <Link>libpng14-14.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\libxml2.dll">
+      <Link>libxml2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\License.txt">
+      <Link>License.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obabel.exe">
+      <Link>obabel.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obchiral.exe">
+      <Link>obchiral.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obconformer.exe">
+      <Link>obconformer.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obenergy.exe">
+      <Link>obenergy.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obfit.exe">
+      <Link>obfit.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obgen.exe">
+      <Link>obgen.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obgrep.exe">
+      <Link>obgrep.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obgui.exe">
+      <Link>obgui.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obminimize.exe">
+      <Link>obminimize.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obprobe.exe">
+      <Link>obprobe.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obprop.exe">
+      <Link>obprop.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obrms.exe">
+      <Link>obrms.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obrotamer.exe">
+      <Link>obrotamer.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obrotate.exe">
+      <Link>obrotate.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obspectrophore.exe">
+      <Link>obspectrophore.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\openbabel-2.dll">
+      <Link>openbabel-2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\openbabel.jar">
+      <Link>openbabel.jar</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\openbabel_csharp.dll">
+      <Link>openbabel_csharp.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\openbabel_java.dll">
+      <Link>openbabel_java.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\Uninstall.exe">
+      <Link>Uninstall.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\xdr-0.dll">
+      <Link>xdr-0.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\zlib1.dll">
+      <Link>zlib1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="AR_mediastream.html" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
@@ -110,6 +386,154 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="scripts\THREE.Molecule.js" />
+    <Content Include="..\3rdParty\OBDotNet\formats_cairo.obf">
+      <Link>formats_cairo.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\formats_common.obf">
+      <Link>formats_common.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\formats_compchem.obf">
+      <Link>formats_compchem.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\formats_misc.obf">
+      <Link>formats_misc.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\formats_utility.obf">
+      <Link>formats_utility.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\formats_xml.obf">
+      <Link>formats_xml.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\obdepict.bat">
+      <Link>obdepict.bat</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\plugin_charges.obf">
+      <Link>plugin_charges.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\plugin_descriptors.obf">
+      <Link>plugin_descriptors.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\plugin_fingerprints.obf">
+      <Link>plugin_fingerprints.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\plugin_forcefields.obf">
+      <Link>plugin_forcefields.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\plugin_ops.obf">
+      <Link>plugin_ops.obf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\sdf.bat">
+      <Link>sdf.bat</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\bin2hex.pl">
+      <Link>bin2hex.pl</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\gaff.dat">
+      <Link>gaff.dat</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\gaff.prm">
+      <Link>gaff.prm</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\genheaders.sh">
+      <Link>genheaders.sh</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\ghemical.prm">
+      <Link>ghemical.prm</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mm2.prm">
+      <Link>mm2.prm</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmff94.ff">
+      <Link>mmff94.ff</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmff94s.ff">
+      <Link>mmff94s.ff</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffang.par">
+      <Link>mmffang.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffbndk.par">
+      <Link>mmffbndk.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffbond.par">
+      <Link>mmffbond.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffchg.par">
+      <Link>mmffchg.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffdef.par">
+      <Link>mmffdef.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffdfsb.par">
+      <Link>mmffdfsb.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffoop.par">
+      <Link>mmffoop.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffpbci.par">
+      <Link>mmffpbci.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffprop.par">
+      <Link>mmffprop.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffstbn.par">
+      <Link>mmffstbn.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffs_oop.par">
+      <Link>mmffs_oop.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffs_tor.par">
+      <Link>mmffs_tor.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmfftor.par">
+      <Link>mmfftor.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\mmffvdw.par">
+      <Link>mmffvdw.par</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\svgformat.script">
+      <Link>svgformat.script</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\3rdParty\OBDotNet\data\UFF.prm">
+      <Link>UFF.prm</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -144,8 +568,8 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Debug copy "$(SolutionDir)3rdParty\OBDotNet\*.*" "$(TargetDir)"
-if $(ConfigurationName) == Release copy "$(SolutionDir)3rdParty\OBDotNet\*.*" "$(TargetDir)_PublishedWebsites\Molecules3D\bin\"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
