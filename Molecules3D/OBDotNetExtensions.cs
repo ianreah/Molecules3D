@@ -8,9 +8,9 @@ namespace Molecules3D
 	{
 		private static readonly OBElementTable obElementTable = new OBElementTable();
 
-		public static int GetElementColor(this OBAtom obAtom)
+		public static int GetElementColor(this string element)
 		{
-			var rgb = obElementTable.GetRGB((int)obAtom.GetAtomicNum())
+			var rgb = obElementTable.GetRGB(obElementTable.GetAtomicNum(element))
 				                    .Select(x => (int)(x * 255))
 									.ToArray();
 
