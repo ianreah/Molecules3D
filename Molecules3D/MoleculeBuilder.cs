@@ -11,7 +11,7 @@ namespace Molecules3D
     public class MoleculeBuilder
     {
 		private IEnumerable<Tuple<double, double, double, string>> atomData;
-		private IEnumerable<Tuple<int, int>> bondData;
+		private IEnumerable<Tuple<int, int, int>> bondData;
 
         public MoleculeBuilder FromSmiles(string smiles)
         {
@@ -72,7 +72,7 @@ namespace Molecules3D
 				var from = result.Atoms.ElementAt(x.Item1);
 				var to = result.Atoms.ElementAt(x.Item2);
 
-				return new BondDto(from.X, from.Y, from.Z, to.X, to.Y, to.Z);
+				return new BondDto(from.X, from.Y, from.Z, to.X, to.Y, to.Z, x.Item3);
 			});
 
 			return result;

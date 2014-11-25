@@ -5,7 +5,7 @@ namespace Molecules3D
 	[DataContract]
 	public class BondDto
 	{
-		public BondDto(double fromX, double fromY, double fromZ, double toX, double toY, double toZ)
+		public BondDto(double fromX, double fromY, double fromZ, double toX, double toY, double toZ, int bondOrder)
 		{
 			this.FromX = fromX;
 			this.FromY = fromY;
@@ -13,6 +13,7 @@ namespace Molecules3D
 			this.ToX = toX;
 			this.ToY = toY;
 			this.ToZ = toZ;
+			this.BondOrder = bondOrder;
 		}
 
 		[DataMember]
@@ -32,5 +33,8 @@ namespace Molecules3D
 
 		[DataMember]
 		public double ToZ { get; set; }
+
+		[DataMember]
+		public int BondOrder { get; set; }
 	}
 }

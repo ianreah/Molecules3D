@@ -34,7 +34,7 @@ namespace Molecules3D
 			}
 		}
 
-		public IEnumerable<Tuple<int, int>> BondData
+		public IEnumerable<Tuple<int, int, int>> BondData
 		{
 			get
 			{
@@ -50,7 +50,7 @@ namespace Molecules3D
 								 .Select(line =>
 								 {
 									 var data = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-									 return new Tuple<int, int>(int.Parse(data[0]) - 1, int.Parse(data[1]) - 1);
+									 return Tuple.Create(int.Parse(data[0]) - 1, int.Parse(data[1]) - 1, int.Parse(data[2]));
 								 });
 			}
 		}
