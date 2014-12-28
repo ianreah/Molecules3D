@@ -8,10 +8,9 @@ namespace Molecules3D
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            GlobalConfiguration.Configuration.Routes.MapHttpRoute(
-                name: "API Search",
-                routeTemplate: "api/search/{*searchTerm}",
-				defaults: new { controller = "Search" });
+			GlobalConfiguration.Configuration.Routes.MapHttpRoute(
+				name: "Default",
+				routeTemplate: "api/{controller}" );
         }
     }
 }

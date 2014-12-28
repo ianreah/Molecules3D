@@ -12,8 +12,7 @@ namespace Molecules3D
 {
 	public class SearchController : ApiController
 	{
-		// GET api/search/{searchTerm} - search for a molecule
-		public MoleculeDto Get(string searchTerm)
+		public MoleculeDto Post([FromBody] string searchTerm)
 		{
 			return new MoleculeBuilder().FromSmiles(searchTerm)
 										.Centralize()

@@ -12,7 +12,7 @@ THREE.Object3D.prototype.clear = function () {
     };
 };
 
-THREE.Molecule.prototype.loadAsync = function (jsonUrl, loadedCallback) {
+THREE.Molecule.prototype.loadAsync = function (url, data, loadedCallback) {
     this.clear();
 	var me = this;
 
@@ -28,8 +28,8 @@ THREE.Molecule.prototype.loadAsync = function (jsonUrl, loadedCallback) {
 		return new THREE.Vector3().addVectors(a, b);
 	}
 
-	$.getJSON(jsonUrl, function (data) {
-		var atoms = data.Atoms;
+	$.post(url, data, function (result) {
+		var atoms = result.Atoms;
 		for (var i = 0; i < atoms.length; i++) {
 			var atom = atoms[i];
 			var sphere = new THREE.Mesh(
@@ -42,7 +42,7 @@ THREE.Molecule.prototype.loadAsync = function (jsonUrl, loadedCallback) {
 			me.add(sphere);
 		}
 
-		var bonds = data.Bonds;
+		var bonds = result.Bonds;
 		for (var j = 0; j < bonds.length; j++) {
 			var bond = bonds[j];
 

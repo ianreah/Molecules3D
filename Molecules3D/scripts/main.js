@@ -9,7 +9,7 @@
 	    if (event.keyCode == 13) {
 	        $('#loading').show();
 
-	        molecule.loadAsync('/api/search/' + $('#smiles').val(), function () {
+	        molecule.loadAsync('/api/search/', { '' : $('#smiles').val() }, function () {
 	            $('#loading').hide();
 	        });
 
@@ -36,7 +36,7 @@
 	scene.add(molecule);
 	scene.add(camera);
 
-	molecule.loadAsync('/api/search/Cn1cnc2c1c(=O)n(c(=O)n2C)C', function () {
+	molecule.loadAsync('/api/search/', { '': 'Cn1cnc2c1c(=O)n(c(=O)n2C)C' }, function () {
 	    $('#loading').hide();
 	});
 
