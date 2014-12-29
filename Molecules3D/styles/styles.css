@@ -6,32 +6,11 @@
     font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
 }
 
-canvas {
-	width: 100%;
-	height: 100%;
-}
-
-#forkme_banner {
-  display: block;
-  position: absolute;
-  top:0;
-  right: 10px;
-  z-index: 10;
-  padding: 10px 50px 10px 10px;
-  color: #fff;
-  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
-  font-weight: 700;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  text-decoration: none;
-}
-
 #loading {
 	text-align: center;
 	font-size: 80px;
 	font-weight: bold;
+	margin-top: 60px;
 }
 
 #nowebgl {

@@ -356,7 +356,6 @@
     <Content Include="AR_mediastream.html" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
-    <Content Include="images\blacktocat.png" />
     <Content Include="images\static.png" />
     <Content Include="scripts\AR_mediastream.js" />
     <Content Include="scripts\Detector.js" />
