@@ -19,11 +19,12 @@
 	margin-top: 60px;
 }
 
-a:link, a:visited {
+a {
 	color: #43adff;
 	text-decoration:none;
 }
 
 a:hover, a:active {
+	color: #43adff;
 	text-decoration:underline;
 }
