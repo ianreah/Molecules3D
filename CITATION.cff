@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: Molecules3D
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Ian
+    family-names: Reah
+repository-code: 'https://github.com/ianreah/Molecules3D'
